@@ -5,8 +5,8 @@ Single-customer churn prediction from raw form input.
 
 import pandas as pd
 import numpy as np
-from src.model_training import load_artifacts
-from src.data_preprocessing import NUMERIC_COLS
+from .model_training import load_artifacts
+from .data_preprocessing import NUMERIC_COLS
 
 
 # ── All one-hot columns produced during training ───────────────────────────────

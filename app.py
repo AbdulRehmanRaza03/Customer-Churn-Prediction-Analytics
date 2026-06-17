@@ -12,8 +12,13 @@ import pandas as pd
 import numpy as np
 
 warnings.filterwarnings("ignore")
-sys.path.insert(0, os.path.dirname(__file__))
 
+# ── Add directories to path for Streamlit Cloud compatibility ────────────────
+app_dir = os.path.dirname(os.path.abspath(__file__))
+if app_dir not in sys.path:
+    sys.path.insert(0, app_dir)
+
+# Import src modules
 from src.data_preprocessing import load_data, get_train_test_split, generate_sample_dataset
 from src.model_training import (
     train_all_models, save_artifacts, load_artifacts,
